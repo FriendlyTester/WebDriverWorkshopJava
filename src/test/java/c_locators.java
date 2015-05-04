@@ -18,6 +18,8 @@ public class c_locators {
         //Navigate to a Website.
         Driver.navigate().to("http://www.twitter.com");
 
+        //Chrome tools & Firefox tools
+
         WebElement ElementByClassName = Driver.findElement(By.className("text-input"));
         WebElement ElementByCssSelector = Driver.findElement(By.cssSelector("input.text-input.email-input"));
         WebElement ElementByID = Driver.findElement(By.id("signin-email"));
