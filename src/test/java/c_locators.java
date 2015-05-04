@@ -48,4 +48,10 @@ public class c_locators {
         //13/10/2014 it was number 9
         WebElement ElementByTagFindAll = inputs.get(9);
     }
+
+    public void C_CreateYourOwn()
+    {
+        //Pick a website of yout choice
+        //See if you can find the correct locators
+    }
 }
