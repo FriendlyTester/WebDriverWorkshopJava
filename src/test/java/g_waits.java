@@ -13,6 +13,7 @@ public class g_waits {
 
     //How do we deal with waits.
     //Why do we need to?
+    //Implicit and Explicit waits
     public void waitforlements()
     {
         //Start a Firefox Instance
