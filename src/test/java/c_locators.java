@@ -29,6 +29,9 @@ public class c_locators {
         //But they can be different
         WebElement ElementByXPath1 = Driver.findElement(By.xpath("//*[@id=\"signin-email\"]"));
         WebElement ElementByCssSelector1 = Driver.findElement(By.cssSelector("#signin-email"));
+
+        //CSS Game
+        //http://flukeout.github.io/
     }
 
     @Test

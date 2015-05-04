@@ -19,8 +19,9 @@ public class e_screenshots {
         //Navigate to a Website.
         Driver.navigate().to("http://www.twitter.com");
 
-        File scrFile = ((TakesScreenshot) Driver).getScreenshotAs(OutputType.FILE);
+        //File scrFile = ((TakesScreenshot) Driver).getScreenshotAs(OutputType.FILE);
+        File scrFile = Driver.getScreenshotAs(OutputType.FILE);
         // Now you can do whatever you need to do with it, for example copy somewhere
-        FileUtils.copyFile(scrFile, new File("C:\\Users\\Richard\\Desktop\\twitter.jpg"));
+        FileUtils.copyFile(scrFile, new File("C:\\Users\\IEUser\\Desktop\\twitter.jpg"));
     }
 }

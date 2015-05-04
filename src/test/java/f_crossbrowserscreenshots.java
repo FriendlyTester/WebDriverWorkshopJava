@@ -23,19 +23,19 @@ public class f_crossbrowserscreenshots {
     private void TakeScreenshotFirefox() throws IOException {
         FirefoxDriver Driver = new FirefoxDriver();
         Driver.navigate().to("http://thefriendlytester.co.uk");
-        File scrFile = ((TakesScreenshot) Driver).getScreenshotAs(OutputType.FILE);
+        File scrFile = Driver.getScreenshotAs(OutputType.FILE);
         // Now you can do whatever you need to do with it, for example copy somewhere
-        FileUtils.copyFile(scrFile, new File("C:\\Users\\Richard\\Desktop\\FirefoxScreenshot.jpg"));
+        FileUtils.copyFile(scrFile, new File("C:\\Users\\IEUser\\Desktop\\FirefoxScreenshot.jpg"));
         Driver.quit();
     }
 
     private void TakeScreenshotChrome() throws IOException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Richard\\Desktop\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\IEUser\\\\Documents\\\\RTDWebDriverWorkshop\\\\chromedriver.exe");
         ChromeDriver Driver = new ChromeDriver();
         Driver.navigate().to("http://thefriendlytester.co.uk");
-        File scrFile = ((TakesScreenshot) Driver).getScreenshotAs(OutputType.FILE);
+        File scrFile = Driver.getScreenshotAs(OutputType.FILE);
         // Now you can do whatever you need to do with it, for example copy somewhere
-        FileUtils.copyFile(scrFile, new File("C:\\Users\\Richard\\Desktop\\ChromeScreenshot.jpg"));
+        FileUtils.copyFile(scrFile, new File("C:\\Users\\IEUser\\Desktop\\ChromeScreenshot.jpg"));
         Driver.quit();
     }
 }
