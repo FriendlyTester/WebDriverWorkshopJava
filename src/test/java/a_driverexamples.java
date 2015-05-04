@@ -11,7 +11,7 @@ import java.net.URL;
 /**
  * Created by IEUser on 04/05/2015.
  */
-public class a_driverfactory {
+public class a_driverexamples {
     
     @Test
     public void A_CreateFirefoxDriver()
