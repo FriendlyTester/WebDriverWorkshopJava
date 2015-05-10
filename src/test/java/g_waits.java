@@ -1,3 +1,4 @@
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -11,10 +12,19 @@ import java.sql.Driver;
  */
 public class g_waits {
 
-    //How do we deal with waits.
-    //Why do we need to?
-    //Implicit and Explicit waits
-    public void waitforlements()
+    @Test
+    public void G_ImplicitWait() throws InterruptedException {
+        FirefoxDriver Driver = new FirefoxDriver();
+        //Navigate to a Website.
+        Driver.navigate().to("http://www.twitter.com");
+
+        Thread.sleep(5000);
+
+        Driver.quit();
+    }
+
+    @Test
+    public void G_ExplicitWaits()
     {
         //Start a Firefox Instance
         FirefoxDriver Driver = new FirefoxDriver();
@@ -23,5 +33,7 @@ public class g_waits {
 
         WebDriverWait wait = new WebDriverWait(Driver, 1000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("signin-email")));
+
+        Driver.quit();
     }
 }
