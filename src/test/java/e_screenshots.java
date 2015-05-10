@@ -10,10 +10,10 @@ import java.io.IOException;
 /**
  * Created by IEUser on 04/05/2015.
  */
-public class e_screenshots {
+public class E_Screenshots {
 
     @Test
-    public void E_TakeAScreenshot() throws IOException {
+    public void e_TakeAScreenshot() throws IOException {
         //Start a Firefox Instance
         FirefoxDriver Driver = new FirefoxDriver();
         //Navigate to a Website.

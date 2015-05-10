@@ -9,11 +9,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Created by IEUser on 04/05/2015.
  */
-public class h_examplecheck {
+public class H_Examplecheck {
     //Blog post - http://www.thefriendlytester.co.uk/2014/01/checking-if-element-is-present-with.html
 
     @Test
-    public void H_IncorrectPassword()
+    public void h_InvalidPassword()
     {
         FirefoxDriver Driver = new FirefoxDriver();
         Driver.navigate().to("http://twitter.com");
@@ -35,7 +35,7 @@ public class h_examplecheck {
         Driver.quit();
     }
 
-    public void H_AutomateSomething()
+    public void h_AutomateSomething()
     {
 
     }

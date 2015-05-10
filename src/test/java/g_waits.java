@@ -10,10 +10,10 @@ import java.sql.Driver;
 /**
  * Created by IEUser on 04/05/2015.
  */
-public class g_waits {
+public class G_Waits {
 
     @Test
-    public void G_ImplicitWait() throws InterruptedException {
+    public void g_ImplicitWait() throws InterruptedException {
         FirefoxDriver Driver = new FirefoxDriver();
         //Navigate to a Website.
         Driver.navigate().to("http://www.twitter.com");
@@ -24,7 +24,7 @@ public class g_waits {
     }
 
     @Test
-    public void G_ExplicitWaits()
+    public void g_ExplicitWaits()
     {
         //Start a Firefox Instance
         FirefoxDriver Driver = new FirefoxDriver();

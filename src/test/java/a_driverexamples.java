@@ -11,17 +11,17 @@ import java.net.URL;
 /**
  * Created by IEUser on 04/05/2015.
  */
-public class a_driverexamples {
+public class A_DriverExamples {
     
     @Test
-    public void A_CreateFirefoxDriver()
+    public void a_CreateFirefoxDriver()
     {
         FirefoxDriver Driver = new FirefoxDriver();
         //Driver remains open, how do we stop that?
     }
 
     @Test
-    public void A_CreateChromeDriver()
+    public void a_CreateChromeDriver()
     {
         ChromeDriver Driver = new ChromeDriver();
         //Why doesn't this work?
@@ -30,13 +30,13 @@ public class a_driverexamples {
     }
 
     @Test
-    public void A_CreateInternetExplorerDriver()
+    public void a_CreateInternetExplorerDriver()
     {
         //System.setProperty("webdriver.ie.driver", "C:\\Users\\IEUser\\Documents\\RTDWebDriverWorkshop\\IEDriverServer.exe");
         InternetExplorerDriver Driver = new InternetExplorerDriver();
     }
 
-    public void A_CreateRemoteWebDriver() throws MalformedURLException {
+    public void a_CreateRemoteWebDriver() throws MalformedURLException {
         RemoteWebDriver Driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
     }
 }

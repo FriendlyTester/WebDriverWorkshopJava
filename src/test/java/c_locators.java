@@ -8,10 +8,10 @@ import java.util.List;
 /**
  * Created by IEUser on 04/05/2015.
  */
-public class c_locators {
+public class C_Locators {
 
     @Test
-    public void C_AllLocators()
+    public void c_AllLocators()
     {
         //Start a Firefox Instance
         FirefoxDriver Driver = new FirefoxDriver();
@@ -37,7 +37,7 @@ public class c_locators {
     }
 
     @Test
-    public void C_FindElements()
+    public void c_FindElements()
     {
         //Start a Firefox Instance
         FirefoxDriver Driver = new FirefoxDriver();
@@ -49,7 +49,7 @@ public class c_locators {
         WebElement ElementByTagFindAll = inputs.get(9);
     }
 
-    public void C_CreateYourOwn()
+    public void c_CreateYourOwn()
     {
         //Pick a website of yout choice
         //See if you can find the correct locators

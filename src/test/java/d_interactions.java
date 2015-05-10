@@ -5,9 +5,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 /**
  * Created by IEUser on 04/05/2015.
  */
-public class d_interactions {
+public class D_Interactions {
     @Test
-    public void D_SimpleInteractions()
+    public void d_SimpleInteractions()
     {
         //Start a Firefox Instance
         FirefoxDriver Driver = new FirefoxDriver();
@@ -28,7 +28,7 @@ public class d_interactions {
     }
 
     @Test
-    public void D_DriverInteractions()
+    public void d_DriverInteractions()
     {
         //Start a Firefox Instance
         FirefoxDriver Driver = new FirefoxDriver();
