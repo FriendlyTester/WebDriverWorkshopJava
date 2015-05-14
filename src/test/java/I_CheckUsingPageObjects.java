@@ -3,7 +3,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import pageobjects.TwitterHomepage;
+import pageobjects.TwitterHomePage;
 import pageobjects.TwitterLoginErrorPage;
 
 /**
@@ -17,7 +17,7 @@ public class I_CheckUsingPageObjects {
         FirefoxDriver Driver = new FirefoxDriver();
         Driver.navigate().to("http://twitter.com");
 
-        TwitterHomepage twitterHomepage = new TwitterHomepage(Driver);
+        TwitterHomePage twitterHomepage = new TwitterHomePage(Driver);
         twitterHomepage.populateUsername("FriendlyTester");
 
         TwitterLoginErrorPage twitterLoginErrorPage = twitterHomepage.clickLogin();

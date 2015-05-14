@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Created by IEUser on 10/05/2015.
  */
-public class TwitterHomepage {
+public class TwitterHomePage {
 
     @FindBy(how = How.ID, using = "signin-email")
     private WebElement txtUsername;
@@ -22,7 +22,7 @@ public class TwitterHomepage {
 
     private WebDriver Driver;
 
-    public TwitterHomepage(WebDriver driver)
+    public TwitterHomePage(WebDriver driver)
     {
         Driver = driver;
         PageFactory.initElements(Driver, this);
