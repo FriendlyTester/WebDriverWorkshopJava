@@ -12,20 +12,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Created by IEUser on 10/05/2015.
  */
-public class TwitterLoginErrorPage {
+public class LoginErrorPage {
 
-    @FindBy(how = How.CSS, using = "#message-drawer span")
+    @FindBy(how = How.ID, using = "flash")
     private WebElement errorMessagePanel;
 
     private WebDriver Driver;
 
-    public TwitterLoginErrorPage(WebDriver driver)
+    public LoginErrorPage(WebDriver driver)
     {
         Driver = driver;
         PageFactory.initElements(Driver, this);
 
         WebDriverWait wait = new WebDriverWait(Driver, 5000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#message-drawer span")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("flash")));
     }
 
     public String ReadErrorMessage()

@@ -16,7 +16,7 @@ public class G_Waits {
     public void g_ImplicitWait() throws InterruptedException {
         FirefoxDriver Driver = new FirefoxDriver();
         //Navigate to a Website.
-        Driver.navigate().to("http://www.twitter.com");
+        Driver.navigate().to("https://the-internet.herokuapp.com/login");
 
         Thread.sleep(5000);
 
@@ -29,10 +29,10 @@ public class G_Waits {
         //Start a Firefox Instance
         FirefoxDriver Driver = new FirefoxDriver();
         //Navigate to a Website.
-        Driver.navigate().to("http://www.twitter.com");
+        Driver.navigate().to("https://the-internet.herokuapp.com/login");
 
         WebDriverWait wait = new WebDriverWait(Driver, 1000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("signin-email")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password")));
 
         Driver.quit();
     }

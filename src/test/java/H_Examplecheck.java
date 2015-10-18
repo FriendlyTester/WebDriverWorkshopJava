@@ -16,22 +16,21 @@ public class H_Examplecheck {
     public void h_InvalidPassword()
     {
         FirefoxDriver Driver = new FirefoxDriver();
-        Driver.navigate().to("http://twitter.com");
+        Driver.navigate().to("https://the-internet.herokuapp.com/login");
 
         WebDriverWait waitForUsername = new WebDriverWait(Driver, 5000);
-        waitForUsername.until(ExpectedConditions.visibilityOfElementLocated(By.id("signin-email")));
+        waitForUsername.until(ExpectedConditions.visibilityOfElementLocated(By.id("username")));
 
-        WebElement txtUsername = Driver.findElement(By.id("signin-email"));
-        txtUsername.sendKeys("FriendlyTester");
+        WebElement txtUsername = Driver.findElement(By.id("username"));
+        txtUsername.sendKeys("tomsmith");
 
-        WebElement btnLogin = Driver.findElement(By.cssSelector("button.submit.btn.primary-btn"));
+        WebElement btnLogin = Driver.findElement(By.cssSelector("button.radius"));
         btnLogin.click();
 
         WebDriverWait waitForError = new WebDriverWait(Driver, 5000);
-        waitForError.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#message-drawer span")));
+        waitForError.until(ExpectedConditions.visibilityOfElementLocated(By.id("flash")));
 
-        Assert.assertEquals(Driver.findElement(By.cssSelector("#message-drawer span")).getText(), "The username and password that you entered did not match our records. Please double-check and try again.");
-
+        Assert.assertTrue(Driver.findElement(By.id("flash")).getText().contains("Your password is invalid!"));
         Driver.quit();
     }
 

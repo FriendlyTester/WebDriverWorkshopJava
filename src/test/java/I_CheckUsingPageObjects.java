@@ -1,10 +1,9 @@
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import pageobjects.TwitterHomePage;
-import pageobjects.TwitterLoginErrorPage;
+import pageobjects.LoginPage;
+import pageobjects.LoginErrorPage;
 
 /**
  * Created by IEUser on 10/05/2015.
@@ -15,13 +14,13 @@ public class I_CheckUsingPageObjects {
     public void i_InvalidPasswordPageObjects()
     {
         FirefoxDriver Driver = new FirefoxDriver();
-        Driver.navigate().to("http://twitter.com");
+        Driver.navigate().to("https://the-internet.herokuapp.com/login");
 
-        TwitterHomePage twitterHomepage = new TwitterHomePage(Driver);
-        twitterHomepage.populateUsername("FriendlyTester");
+        LoginPage loginPage = new LoginPage(Driver);
+        loginPage.populateUsername("tomsmith");
 
-        TwitterLoginErrorPage twitterLoginErrorPage = twitterHomepage.clickLogin();
-        Assert.assertEquals(twitterLoginErrorPage.ReadErrorMessage(), "The username and password that you entered did not match our records. Please double-check and try again.");
+        LoginErrorPage twitterLoginErrorPage = loginPage.clickLogin();
+        Assert.assertTrue(Driver.findElement(By.id("flash")).getText().contains("Your password is invalid!"));
 
         Driver.quit();
     }

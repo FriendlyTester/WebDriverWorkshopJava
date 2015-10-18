@@ -12,19 +12,19 @@ public class D_Interactions {
         //Start a Firefox Instance
         FirefoxDriver Driver = new FirefoxDriver();
         //Navigate to a Website.
-        Driver.navigate().to("http://www.twitter.com");
+        Driver.navigate().to("https://the-internet.herokuapp.com/login");
 
-        //Read the text of an element, in this case the first H1 tag.
-        System.out.println(Driver.findElement(By.tagName("h1")).getText());
+        //Read the text of an element, in this case the first H2 tag.
+        System.out.println(Driver.findElement(By.tagName("h2")).getText());
         //Enter a value in the username field using SendKeys.
-        Driver.findElement(By.id("signin-email")).sendKeys("FriendlyTester");
+        Driver.findElement(By.id("username")).sendKeys("tomsmith");
         //Read the value that is in the username input field
-        System.out.println(Driver.findElement(By.id("signin-email")).getAttribute("value"));
+        System.out.println(Driver.findElement(By.id("username")).getAttribute("value"));
         //We can read any attribute
         //Read the placeholder attribute of the password field
-        System.out.println(Driver.findElement(By.id("signin-password")).getAttribute("placeholder"));
+        System.out.println(Driver.findElement(By.id("password")).getAttribute("placeholder"));
         //Click on the first button, the sign in button in this instance
-        Driver.findElement(By.cssSelector("button.submit.primary-btn")).click();
+        Driver.findElement(By.cssSelector("button.radius")).click();
     }
 
     @Test
@@ -33,9 +33,9 @@ public class D_Interactions {
         //Start a Firefox Instance
         FirefoxDriver Driver = new FirefoxDriver();
         //Navigate to a Website.
-        Driver.navigate().to("http://www.twitter.com");
+        Driver.navigate().to("https://the-internet.herokuapp.com/login");
         //Click on the first button, the sign in button in this instance
-        Driver.findElement(By.cssSelector("button.submit.primary-btn")).click();
+        Driver.findElement(By.cssSelector("button.radius")).click();
         //Read the url of the page.
         System.out.println(Driver.getCurrentUrl());
         //Read the page title / tab title

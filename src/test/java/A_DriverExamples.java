@@ -23,16 +23,16 @@ public class A_DriverExamples {
     @Test
     public void a_CreateChromeDriver()
     {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\IEUser\\Documents\\WebDriverWorkshopJava\\chromedriver.exe");
         ChromeDriver Driver = new ChromeDriver();
         //Why doesn't this work?
-        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\IEUser\\Documents\\RTDWebDriverWorkshop\\chromedriver.exe");
         //Mac? Place chromedriver executable in this foler /usr/bin, download mac version though, http://chromedriver.storage.googleapis.com/index.html?path=2.15/
     }
 
     @Test
     public void a_CreateInternetExplorerDriver()
     {
-        //System.setProperty("webdriver.ie.driver", "C:\\Users\\IEUser\\Documents\\RTDWebDriverWorkshop\\IEDriverServer.exe");
+        System.setProperty("webdriver.ie.driver", "C:\\Users\\IEUser\\Documents\\WebDriverWorkshopJava\\IEDriverServer.exe");
         InternetExplorerDriver Driver = new InternetExplorerDriver();
     }
 
