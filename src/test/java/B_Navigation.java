@@ -12,7 +12,7 @@ public class B_Navigation {
         //We need to use to the Navigate method.
         Driver.navigate().to("http://thefriendlytester.co.uk");
         Thread.sleep(2500);
-        Driver.navigate().to("http://www.thefriendlytester.co.uk/p/nottstest.html");
+        Driver.navigate().to("http://www.thefriendlytester.co.uk/p/about-me.html");
         Thread.sleep(2500);
         Driver.navigate().back();
         Thread.sleep(2500);

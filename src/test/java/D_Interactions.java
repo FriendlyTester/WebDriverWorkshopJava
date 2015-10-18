@@ -22,7 +22,7 @@ public class D_Interactions {
         System.out.println(Driver.findElement(By.id("username")).getAttribute("value"));
         //We can read any attribute
         //Read the placeholder attribute of the password field
-        System.out.println(Driver.findElement(By.id("password")).getAttribute("placeholder"));
+        System.out.println(Driver.findElement(By.id("password")).getAttribute("name"));
         //Click on the first button, the sign in button in this instance
         Driver.findElement(By.cssSelector("button.radius")).click();
     }

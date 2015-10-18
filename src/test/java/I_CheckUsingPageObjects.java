@@ -19,8 +19,8 @@ public class I_CheckUsingPageObjects {
         LoginPage loginPage = new LoginPage(Driver);
         loginPage.populateUsername("tomsmith");
 
-        LoginErrorPage twitterLoginErrorPage = loginPage.clickLogin();
-        Assert.assertTrue(Driver.findElement(By.id("flash")).getText().contains("Your password is invalid!"));
+        LoginErrorPage loginErrorPage = loginPage.clickLogin();
+        Assert.assertTrue(loginErrorPage.ReadErrorMessage().contains("Your password is invalid!"));
 
         Driver.quit();
     }
