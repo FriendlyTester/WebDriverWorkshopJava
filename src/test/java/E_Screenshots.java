@@ -6,7 +6,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 
 /**
  * Created by IEUser on 04/05/2015.
@@ -23,6 +22,11 @@ public class E_Screenshots {
         //File scrFile = ((TakesScreenshot) Driver).getScreenshotAs(OutputType.FILE);
         File scrFile = Driver.getScreenshotAs(OutputType.FILE);
         // Now you can do whatever you need to do with it, for example copy somewhere
-        FileUtils.copyFile(scrFile, new File("C:\\Users\\IEUser\\Desktop\\twitter.jpg"));
+
+        //Windows
+        //FileUtils.copyFile(scrFile, new File("C:\\Users\\IEUser\\Desktop\\twitter.jpg"));
+
+        //Mac
+        FileUtils.copyFile(scrFile, new File("/Users/richard/Desktop/twitter.jpg"));
     }
 }
