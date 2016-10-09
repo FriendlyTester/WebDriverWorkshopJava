@@ -16,6 +16,12 @@ public class A_DriverExamples {
     @Test
     public void a_CreateFirefoxDriver()
     {
+        //https://github.com/mozilla/geckodriver/releases
+        //GeckoDriver is needed now
+        //Mac users can place it in /usr/bin
+        //Windows users must instruct FirefoxDriver where it is
+        //System.setProperty("webdriver.gecko.driver", "C:\\Users\\IEUser\\Documents\\WebDriverWorkshopJava\\geckodriver.exe");
+
         FirefoxDriver Driver = new FirefoxDriver();
         //Driver remains open, how do we stop that?
     }
@@ -23,10 +29,8 @@ public class A_DriverExamples {
     @Test
     public void a_CreateChromeDriver()
     {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\IEUser\\Documents\\WebDriverWorkshopJava\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\IEUser\\Documents\\WebDriverWorkshopJava\\chromedriver.exe");
         ChromeDriver Driver = new ChromeDriver();
-        //Why doesn't this work?
-        //Mac? Place chromedriver executable in this foler /usr/bin, download mac version though, http://chromedriver.storage.googleapis.com/index.html?path=2.15/
     }
 
     @Test
