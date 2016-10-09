@@ -41,7 +41,11 @@ public class A_DriverExamples {
         EdgeDriver Driver = new EdgeDriver();
     }
 
+    @Test
     public void a_CreateRemoteWebDriver() throws MalformedURLException {
+
+        //java -jar src/drivers/selenium-sver-standalone-3.0.0-beta4.jar -role hub
+        //java -jar src/drivers/selenium-sver-standalone-3.0.0-beta4.jar -role node -hub http://localhost:4444/wd/hub
         RemoteWebDriver Driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
     }
 }
