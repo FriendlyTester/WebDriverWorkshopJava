@@ -1,5 +1,6 @@
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -20,7 +21,7 @@ public class A_DriverExamples {
         //GeckoDriver is needed now
         //Mac users can place it in /usr/bin
         //Windows users must instruct FirefoxDriver where it is
-        //System.setProperty("webdriver.gecko.driver", "C:\\Users\\IEUser\\Documents\\WebDriverWorkshopJava\\geckodriver.exe");
+        //System.setProperty("webdriver.gecko.driver", "C:\\Users\\RichardWindwos\\Download\\WebDriverWorkshopJava-master\\WebDriverWorkshop\\src\\drivers\\windwos\\geckodriver.exe");
 
         FirefoxDriver Driver = new FirefoxDriver();
         //Driver remains open, how do we stop that?
@@ -29,15 +30,15 @@ public class A_DriverExamples {
     @Test
     public void a_CreateChromeDriver()
     {
-        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\IEUser\\Documents\\WebDriverWorkshopJava\\chromedriver.exe");
+        //System.setProperty("webdriver.gecko.driver", "C:\\Users\\RichardWindwos\\Download\\WebDriverWorkshopJava-master\\WebDriverWorkshop\\src\\drivers\\windwos\\chromedriver.exe");
         ChromeDriver Driver = new ChromeDriver();
     }
 
     @Test
-    public void a_CreateInternetExplorerDriver()
+    public void a_CreateEdgeDriver()
     {
-        System.setProperty("webdriver.ie.driver", "C:\\Users\\IEUser\\Documents\\WebDriverWorkshopJava\\IEDriverServer.exe");
-        InternetExplorerDriver Driver = new InternetExplorerDriver();
+        System.setProperty("webdriver.edge.driver", "C:\\Users\\IEUser\\Documents\\WebDriverWorkshopJava\\IEDriverServer.exe");
+        EdgeDriver Driver = new EdgeDriver();
     }
 
     public void a_CreateRemoteWebDriver() throws MalformedURLException {
