@@ -5,6 +5,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -48,4 +49,8 @@ public class A_DriverExamples {
         //java -jar src/drivers/selenium-sver-standalone-3.0.0-beta4.jar -role node -hub http://localhost:4444/wd/hub
         RemoteWebDriver Driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
     }
+
+    //SafariDriver
+    //Never need to use to it myself, however I tried on El Capitan it was very flakey
+    //I\ve heard it's better on Sierra
 }
