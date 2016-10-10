@@ -10,6 +10,8 @@ import pageobjects.LoginErrorPage;
  */
 public class I_CheckUsingPageObjects {
 
+    //http://www.thefriendlytester.co.uk/2014/05/pageobject-pattern-why-how-and-more.html
+
     @Test
     public void i_InvalidPasswordPageObjects()
     {

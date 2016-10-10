@@ -16,4 +16,7 @@ public class F_Selectelement {
         selDay.selectByVisibleText("14");
         System.out.println(selDay.getFirstSelectedOption().getText());
     }
+
+    //Control Objects
+    //http://www.thefriendlytester.co.uk/2012/11/i-call-them-controlobjects.html
 }

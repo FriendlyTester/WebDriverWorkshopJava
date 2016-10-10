@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.sql.Driver;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by IEUser on 04/05/2015.
@@ -20,6 +21,16 @@ public class G_Waits {
 
         Thread.sleep(5000);
 
+        Driver.quit();
+    }
+
+    @Test
+    public void g_ImplicitWaitDriverTimeout() throws InterruptedException {
+        FirefoxDriver Driver = new FirefoxDriver();
+        //Navigate to a Website.
+        Driver.navigate().to("https://the-internet.herokuapp.com/login");
+        Driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Driver.findElementById("ThisIsnReal");
         Driver.quit();
     }
 

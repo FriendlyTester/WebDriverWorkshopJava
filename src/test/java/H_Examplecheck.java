@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public class H_Examplecheck {
     //Blog post - http://www.thefriendlytester.co.uk/2014/01/checking-if-element-is-present-with.html
-
     @Test
     public void h_NoPassword()
     {
@@ -33,6 +32,8 @@ public class H_Examplecheck {
         Assert.assertTrue(Driver.findElement(By.id("flash")).getText().contains("Your password is invalid!"));
         Driver.quit();
     }
+
+    //Data Builder Pattern
 
     public void h_InvalidPassword()
     {

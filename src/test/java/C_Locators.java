@@ -20,8 +20,7 @@ public class C_Locators {
         Driver.navigate().to("http://www.twitter.com");
         Driver.findElementByLinkText("Log in").click();
 
-
-        //Chrome tools & Firefox tools
+        //Chrome tools & Firefox tools. How do we find these locators?
 
         WebElement ElementByClassName = Driver.findElement(By.className("text-input"));
         WebElement ElementByCssSelector = Driver.findElement(By.cssSelector("input.text-input.email-input"));
@@ -35,9 +34,17 @@ public class C_Locators {
         //This ID is for the whole dialog
         WebElement ElementByID = Driver.findElement(By.id("login-dialog-dialog"));         //Most common
         WebElement ElementByCssSelector1 = Driver.findElement(By.cssSelector("#login-dialog-dialog"));
+    }
 
-        //CSS Game
-        //http://flukeout.github.io/
+    @Test
+    public void c_InvalidLocator()
+    {
+        //Start a Firefox Instance
+        FirefoxDriver Driver = new FirefoxDriver();
+        //Navigate to a Website.
+        Driver.navigate().to("http://www.twitter.com");
+        Driver.findElementByLinkText("Log in").click();
+        WebElement ElementByID = Driver.findElement(By.id("loginBox"));
     }
 
     @Test
@@ -55,9 +62,14 @@ public class C_Locators {
         System.out.println(ElementByTagFindAll.getAttribute("placeholder"));
     }
 
+    //What is your preference???
+
+    //CSS Game
+    //http://flukeout.github.io/
+
     public void c_CreateYourOwn()
     {
-        //Pick a website of yout choice
-        //See if you can find the correct locators
+        //Pick a website(s) of your choice
+        //See if you can find some good locators
     }
 }
