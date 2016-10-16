@@ -1,9 +1,9 @@
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.io.Console;
 import java.util.List;
 
 /**
@@ -15,10 +15,10 @@ public class C_Locators {
     public void c_AllLocators()
     {
         //Start a Firefox Instance
-        FirefoxDriver Driver = new FirefoxDriver();
+        WebDriver Driver = new FirefoxDriver();
         //Navigate to a Website.
         Driver.navigate().to("http://www.twitter.com");
-        Driver.findElementByLinkText("Log in").click();
+        Driver.findElement(By.linkText("Log in")).click();
 
         //Chrome tools & Firefox tools. How do we find these locators?
 
@@ -33,17 +33,19 @@ public class C_Locators {
 
         //This ID is for the whole dialog
         WebElement ElementByID = Driver.findElement(By.id("login-dialog-dialog"));         //Most common
-        WebElement ElementByCssSelector1 = Driver.findElement(By.cssSelector("#login-dialog-dialog"));
+        WebElement ElementByCssSelector1 = Driver.findElement(By.cssSelector("#login-dialog-dialog input"));
+
+        Driver.quit();
     }
 
     @Test
     public void c_InvalidLocator()
     {
         //Start a Firefox Instance
-        FirefoxDriver Driver = new FirefoxDriver();
+        WebDriver Driver = new FirefoxDriver();
         //Navigate to a Website.
         Driver.navigate().to("http://www.twitter.com");
-        Driver.findElementByLinkText("Log in").click();
+        Driver.findElement(By.linkText("Log in")).click();
         WebElement ElementByID = Driver.findElement(By.id("loginBox"));
     }
 
@@ -51,12 +53,12 @@ public class C_Locators {
     public void c_FindElements()
     {
         //Start a Firefox Instance
-        FirefoxDriver Driver = new FirefoxDriver();
+        WebDriver Driver = new FirefoxDriver();
         //Navigate to a Website.
         Driver.navigate().to("http://www.twitter.com");
-        Driver.findElementByLinkText("Log in").click();
+        Driver.findElement(By.linkText("Log in")).click();
 
-        List<WebElement> inputs = Driver.findElementsByTagName("input");
+        List<WebElement> inputs = Driver.findElements(By.tagName("input"));
 
         WebElement ElementByTagFindAll = inputs.get(11);
         System.out.println(ElementByTagFindAll.getAttribute("placeholder"));

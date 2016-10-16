@@ -1,5 +1,6 @@
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
@@ -10,7 +11,7 @@ public class D_Interactions {
     public void d_SimpleInteractions()
     {
         //Start a Firefox Instance
-        FirefoxDriver Driver = new FirefoxDriver();
+        WebDriver Driver = new FirefoxDriver();
         //Navigate to a Website.
         Driver.navigate().to("https://the-internet.herokuapp.com/login");
 
@@ -31,7 +32,7 @@ public class D_Interactions {
     public void d_DriverInteractions()
     {
         //Start a Firefox Instance
-        FirefoxDriver Driver = new FirefoxDriver();
+        WebDriver Driver = new FirefoxDriver();
         //Navigate to a Website.
         Driver.navigate().to("https://the-internet.herokuapp.com/login");
         //Click on the first button, the sign in button in this instance

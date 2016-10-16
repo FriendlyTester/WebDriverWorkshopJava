@@ -1,4 +1,5 @@
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
@@ -8,7 +9,7 @@ public class B_Navigation {
 
     @Test
     public void navigation() throws InterruptedException {
-        FirefoxDriver Driver = new FirefoxDriver();
+        WebDriver Driver = new FirefoxDriver();
         //We need to use to the Navigate method.
         Driver.navigate().to("http://thefriendlytester.co.uk");
         Thread.sleep(2500);

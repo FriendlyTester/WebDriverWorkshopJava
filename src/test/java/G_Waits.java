@@ -1,5 +1,6 @@
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,7 +16,7 @@ public class G_Waits {
 
     @Test
     public void g_ImplicitWait() throws InterruptedException {
-        FirefoxDriver Driver = new FirefoxDriver();
+        WebDriver Driver = new FirefoxDriver();
         //Navigate to a Website.
         Driver.navigate().to("https://the-internet.herokuapp.com/login");
 
@@ -26,11 +27,11 @@ public class G_Waits {
 
     @Test
     public void g_ImplicitWaitDriverTimeout() throws InterruptedException {
-        FirefoxDriver Driver = new FirefoxDriver();
+        WebDriver Driver = new FirefoxDriver();
         //Navigate to a Website.
         Driver.navigate().to("https://the-internet.herokuapp.com/login");
         Driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        Driver.findElementById("ThisIsnReal");
+        Driver.findElement(By.id("ThisIsNotReal"));
         Driver.quit();
     }
 
@@ -38,11 +39,12 @@ public class G_Waits {
     public void g_ExplicitWaits()
     {
         //Start a Firefox Instance
-        FirefoxDriver Driver = new FirefoxDriver();
+        WebDriver Driver = new FirefoxDriver();
         //Navigate to a Website.
         Driver.navigate().to("https://the-internet.herokuapp.com/login");
 
         WebDriverWait wait = new WebDriverWait(Driver, 1000);
+
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password")));
 
         Driver.quit();
