@@ -1,9 +1,13 @@
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import pageobjects.LoginPage;
 import pageobjects.LoginErrorPage;
+import pageobjects.answers.LoggedInPageAnswer;
+import pageobjects.answers.LoginErrorPageAnswer;
+import pageobjects.answers.LoginPageAnswer;
 
 /**
  * Created by IEUser on 10/05/2015.
@@ -25,5 +29,17 @@ public class I_CheckUsingPageObjects {
         Assert.assertTrue(loginErrorPage.ReadErrorMessage().contains("Your password is invalid!"));
 
         Driver.quit();
+    }
+
+    @Test
+    public void i_IncorrectPasswordPageObjects()
+    {
+        //Can you create these using PageObjects
+    }
+
+    @Test
+    public void i_CorrectPassword()
+    {
+        //Can you create these using PageObjects
     }
 }
