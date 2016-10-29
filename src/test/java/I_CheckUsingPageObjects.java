@@ -1,13 +1,8 @@
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import pageobjects.LoginPage;
 import pageobjects.LoginErrorPage;
-import pageobjects.answers.LoggedInPageAnswer;
-import pageobjects.answers.LoginErrorPageAnswer;
-import pageobjects.answers.LoginPageAnswer;
+import pageobjects.LoginPage;
 
 /**
  * Created by IEUser on 10/05/2015.
