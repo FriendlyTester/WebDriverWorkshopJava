@@ -28,5 +28,7 @@ public class E_Screenshots {
 
         //Mac
         FileUtils.copyFile(scrFile, new File("/Users/richard/Desktop/twitter.jpg"));
+
+        Driver.quit();
     }
 }

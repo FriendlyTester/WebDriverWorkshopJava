@@ -26,6 +26,8 @@ public class D_Interactions {
         System.out.println(Driver.findElement(By.id("password")).getAttribute("name"));
         //Click on the first button, the sign in button in this instance
         Driver.findElement(By.cssSelector("button.radius")).click();
+
+        Driver.quit();
     }
 
     @Test
@@ -41,5 +43,7 @@ public class D_Interactions {
         System.out.println(Driver.getCurrentUrl());
         //Read the page title / tab title
         System.out.println(Driver.getTitle());
+
+        Driver.quit();
     }
 }

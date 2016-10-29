@@ -7,7 +7,8 @@ import org.openqa.selenium.support.ui.Select;
 /**
  * Created by IEUser on 10/05/2015.
  */
-public class F_Selectelement {
+public class F_SelectElement
+{
 
     @Test
     public void f_SelectElementExamples() {
@@ -17,6 +18,8 @@ public class F_Selectelement {
         Select selDay = new Select(Driver.findElement(By.id("day")));
         selDay.selectByVisibleText("14");
         System.out.println(selDay.getFirstSelectedOption().getText());
+
+        Driver.quit();
     }
 
     //Control Objects

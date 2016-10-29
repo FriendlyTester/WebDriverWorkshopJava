@@ -47,6 +47,9 @@ public class C_Locators {
         Driver.navigate().to("http://www.twitter.com");
         Driver.findElement(By.linkText("Log in")).click();
         WebElement ElementByID = Driver.findElement(By.id("loginBox"));
+        //NoSuchElementException is something you will see a lot
+
+        Driver.quit();
     }
 
     @Test
@@ -62,6 +65,8 @@ public class C_Locators {
 
         WebElement ElementByTagFindAll = inputs.get(11);
         System.out.println(ElementByTagFindAll.getAttribute("placeholder"));
+
+        Driver.quit();
     }
 
     //What is your preference???

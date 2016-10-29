@@ -27,7 +27,7 @@ public class A_DriverExamples {
         //Put the path to the folder, not the .exe
 
         //Or you can instruct FirefoxDriver to use it from a specific location
-        //System.setProperty("webdriver.gecko.driver", "C:\\Users\\RichardWindwos\\Download\\WebDriverWorkshopJava-master\\WebDriverWorkshop\\src\\drivers\\windwos\\geckodriver.exe");
+        //System.setProperty("webdriver.gecko.driver", "C:\\Users\\RichardWindows\\Download\\WebDriverWorkshopJava-master\\WebDriverWorkshop\\src\\drivers\\windows\\firefox0.11.1\\64bit\\geckodriver.exe");
 
         WebDriver Driver = new FirefoxDriver();
         Driver.quit();
@@ -36,7 +36,7 @@ public class A_DriverExamples {
     @Test
     public void a_CreateChromeDriver()
     {
-        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\RichardWindwos\\Download\\WebDriverWorkshopJava-master\\WebDriverWorkshop\\src\\drivers\\windwos\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\RichardWindows\\Download\\WebDriverWorkshopJava-master\\WebDriverWorkshop\\src\\drivers\\windows\\chrome2.25\\chromedriver.exe");
         WebDriver Driver = new ChromeDriver();
         Driver.quit();
     }
@@ -52,8 +52,8 @@ public class A_DriverExamples {
     @Test
     public void a_CreateRemoteWebDriver() throws MalformedURLException {
 
-        //java -jar src/drivers/selenium-server-standalone-3.0.0-beta4.jar -role hub
-        //java -jar src/drivers/selenium-server-standalone-3.0.0-beta4.jar -role node -hub http://localhost:4444/wd/hub
+        //java -jar src/drivers/selenium-server-standalone-3.0.1.jar -role hub
+        //java -jar src/drivers/selenium-server-standalone-3.0.1.jar -role node -hub http://localhost:4444/wd/hub
         WebDriver Driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
         Driver.quit();
     }

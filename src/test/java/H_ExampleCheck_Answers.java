@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Created by IEUser on 04/05/2015.
  */
-public class H_Examplecheck_Answers
+public class H_ExampleCheck_Answers
 {
     //Blog post - http://www.thefriendlytester.co.uk/2014/01/checking-if-element-is-present-with.html
 

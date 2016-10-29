@@ -20,5 +20,6 @@ public class B_Navigation {
         Driver.navigate().forward();
         Thread.sleep(2500);
         Driver.navigate().refresh();
+        Driver.quit();
     }
 }
