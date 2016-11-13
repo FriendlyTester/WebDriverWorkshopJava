@@ -3,6 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.Dialect;
 
 import java.util.List;
 
@@ -21,6 +22,8 @@ public class C_Locators {
         Driver.findElement(By.linkText("Log in")).click();
 
         //Chrome tools & Firefox tools. How do we find these locators?
+
+
 
         WebElement ElementByClassName = Driver.findElement(By.className("text-input"));
         WebElement ElementByCssSelector = Driver.findElement(By.cssSelector("input.text-input.email-input"));

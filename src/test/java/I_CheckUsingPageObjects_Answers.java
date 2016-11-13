@@ -15,7 +15,7 @@ public class I_CheckUsingPageObjects_Answers
     @Test
     public void i_NoPasswordPageObjects()
     {
-        WebDriver Driver = new FirefoxDriver();
+        WebDriver Driver = new FirefoxDriver(); //DriverFactory
         Driver.navigate().to("https://the-internet.herokuapp.com/login");
 
         LoginPageAnswer loginPageAnswer = new LoginPageAnswer(Driver);
@@ -38,6 +38,7 @@ public class I_CheckUsingPageObjects_Answers
         loginPageAnswer.populatePassword("password");
 
         LoginErrorPageAnswer loginErrorPageAnswer = loginPageAnswer.clickLoginExpectingError();
+
         Assert.assertTrue(loginErrorPageAnswer.ReadErrorMessage().contains("Your password is invalid!"));
 
         Driver.quit();

@@ -41,5 +41,4 @@ public class LoginPage {
         btnLogin.click();
         return new LoginErrorPage(Driver);
     }
-
 }

@@ -41,8 +41,7 @@ public class G_Waits {
         //Navigate to a Website.
         Driver.navigate().to("https://the-internet.herokuapp.com/login");
 
-        WebDriverWait wait = new WebDriverWait(Driver, 1000);
-
+        WebDriverWait wait = new WebDriverWait(Driver, 5000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password")));
 
         Driver.quit();

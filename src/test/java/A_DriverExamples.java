@@ -14,8 +14,9 @@ import java.net.URL;
 /**
  * Created by IEUser on 04/05/2015.
  */
-public class A_DriverExamples {
-    
+public class A_DriverExamples
+{
+
     @Test
     public void a_CreateFirefoxDriver()
     {
@@ -38,7 +39,7 @@ public class A_DriverExamples {
     {
         //System.setProperty("webdriver.chrome.driver", "C:\\Users\\RichardWindows\\Download\\WebDriverWorkshopJava-master\\WebDriverWorkshop\\src\\drivers\\windows\\chrome2.25\\chromedriver.exe");
         WebDriver Driver = new ChromeDriver();
-        Driver.quit();
+        //Driver.quit();
     }
 
     @Test
@@ -50,15 +51,16 @@ public class A_DriverExamples {
     }
 
     @Test
-    public void a_CreateRemoteWebDriver() throws MalformedURLException {
+    public void a_CreateRemoteWebDriver() throws MalformedURLException
+    {
 
         //java -jar src/drivers/selenium-server-standalone-3.0.1.jar -role hub
         //java -jar src/drivers/selenium-server-standalone-3.0.1.jar -role node -hub http://localhost:4444/wd/hub
         WebDriver Driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
         Driver.quit();
     }
+}
 
     //SafariDriver
     //Never need to use to it myself, however I tried on El Capitan it was very flakey
     //I've heard it's better on Sierra
-}

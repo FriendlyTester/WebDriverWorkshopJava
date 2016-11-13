@@ -11,7 +11,7 @@ public class B_Navigation {
     public void navigation() throws InterruptedException {
         WebDriver Driver = new FirefoxDriver();
         //We need to use to the Navigate method.
-        Driver.navigate().to("http://thefriendlytester.co.uk");
+        Driver.navigate().to("http://www.thefriendlytester.co.uk");
         Thread.sleep(2500);
         Driver.navigate().to("http://www.thefriendlytester.co.uk/p/about-me.html");
         Thread.sleep(2500);
