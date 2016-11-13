@@ -1,7 +1,10 @@
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 
 /**
  * Created by IEUser on 04/05/2015.
@@ -46,4 +49,30 @@ public class D_Interactions {
 
         Driver.quit();
     }
+
+
+    //Future reading, look into the actions class
+    //https://seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/interactions/Actions.html
+    //    @Test
+    //    public void WebDriverActions() throws InterruptedException
+    //    {
+    //        //Start a Firefox Instance
+    //        WebDriver Driver = new ChromeDriver();
+    //        Driver.navigate().to("https://the-internet.herokuapp.com/drag_and_drop");
+    //        Driver.manage().window().maximize();
+    //
+    //        Actions action = new Actions(Driver);
+    //
+    //        action.dragAndDrop(Driver.findElement(By.id("column-a")), Driver.findElement(By.id("column-b")))
+    //                .build()
+    //                .perform();
+    //
+    //        action.clickAndHold(Driver.findElement(By.id("column-a")))
+    //                .moveToElement(Driver.findElement(By.id("column-b")))
+    //                .release()
+    //                .build()
+    //                .perform();
+    //
+    //        Thread.sleep(5000);
+    //    }
 }
