@@ -23,7 +23,7 @@ public class A_DriverExamples
         //https://github.com/mozilla/geckodriver/releases
         //GeckoDriver is needed now
 
-        //Mac users can place it in /usr/bin
+        //Mac users can place it in /usr/bin or usr/local/bin
         //Windows users can add it to their environment variables PATH
         //Put the path to the folder, not the .exe
 
