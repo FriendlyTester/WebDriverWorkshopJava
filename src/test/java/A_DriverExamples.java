@@ -1,4 +1,5 @@
 import org.junit.Test;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -31,6 +32,14 @@ public class A_DriverExamples
         //System.setProperty("webdriver.gecko.driver", "C:\\Users\\RichardWindows\\Download\\WebDriverWorkshopJava-master\\WebDriverWorkshop\\src\\drivers\\windows\\firefox0.11.1\\64bit\\geckodriver.exe");
 
         WebDriver Driver = new FirefoxDriver();
+
+
+        for (int i = 0; i < 1500; i++)
+        {
+            Driver.manage().window().setSize(new Dimension(i, 600));
+        }
+
+
         Driver.quit();
     }
 
