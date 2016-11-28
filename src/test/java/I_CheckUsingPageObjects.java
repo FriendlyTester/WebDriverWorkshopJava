@@ -33,7 +33,7 @@ public class I_CheckUsingPageObjects {
     }
 
     @Test
-    public void i_CorrectPassword()
+    public void i_CorrectPasswordPageObjects()
     {
         //Can you create these using PageObjects
     }
