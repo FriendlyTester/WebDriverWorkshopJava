@@ -1,36 +1,47 @@
 import org.junit.Test;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
-/**
- * Created by IEUser on 04/05/2015.
- */
 public class A_DriverExamples
 {
 
     @Test
-    public void a_CreateFirefoxDriver()
+    public void a_CreateFirefoxDriverGeckoDriverUsrBin()
     {
-        //https://github.com/mozilla/geckodriver/releases
-        //GeckoDriver is needed now
+        //FirefoxDriver requires GeckoDriver, in order to allow Selenium to driver Firefox.
+        //I've made this test work by placing the GeckoDriver in to the /usr/bin folder. This is one of the places on a mac that Selenium will automatically look for it
+        //You'll need to download the latest GeckoDriver from here https://github.com/mozilla/geckodriver
+        WebDriver Driver = new FirefoxDriver();
+        //Driver.quit();
+    }
 
-        //Mac users can place it in /usr/bin or usr/local/bin
-        //Windows users can add it to their environment variables PATH
-        //Put the path to the folder, not the .exe
+    @Test
+    public void a_CreateFirefoxDriverGeckoDriverUsrLocalBin()
+    {
+        //I've made this test work by placing the GeckoDriver in to the /usr/local/bin folder.
+        //This is also one of the places on a mac that Selenium will automatically look for it
+        //Use this if you don't have access to /usr/bin
+        WebDriver Driver = new FirefoxDriver();
+        Driver.quit();
+    }
 
-        //Or you can instruct FirefoxDriver to use it from a specific location
-        //System.setProperty("webdriver.gecko.driver", "C:\\Users\\RichardWindows\\Download\\WebDriverWorkshopJava-master\\WebDriverWorkshop\\src\\drivers\\windows\\firefox0.11.1\\64bit\\geckodriver.exe");
+    @Test
+    public void a_CreateFirefoxDriverGeckoDriverPATH()
+    {
+        //On a windows machine we can add GeckoDriver to the environment PATH
+        //The PATH is a place Selenium will automatically look for the drivers
+        WebDriver Driver = new FirefoxDriver();
+        Driver.quit();
+    }
 
+    @Test
+    public void a_CreateFirefoxDriverGeckoDriverUsingSystemProperty()
+    {
+        //Instead of putting the driver in a place Selenium will look for it, we can specifically tell it where to look for the driver
+        System.setProperty("webdriver.gecko.driver", "/Users/richard/Downloads/geckodriver");
         WebDriver Driver = new FirefoxDriver();
         Driver.quit();
     }
@@ -38,9 +49,24 @@ public class A_DriverExamples
     @Test
     public void a_CreateChromeDriver()
     {
-        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\RichardWindows\\Download\\WebDriverWorkshopJava-master\\WebDriverWorkshop\\src\\drivers\\windows\\chrome2.25\\chromedriver.exe");
+        //Just like with Firefox, you need a driver to make Chrome work with Selenium.
+        //You can download it from here - https://sites.google.com/a/chromium.org/chromedriver/downloads
+        //You can place ChromeDriver is all the same places as above to make it work with Selenium
         WebDriver Driver = new ChromeDriver();
-        //Driver.quit();
+        Driver.quit();
+    }
+
+    @Test
+    public void a_CreateSafariDriver()
+    {
+        //Like Firefox and Chrome, Safari also requires a driver.
+        //The Safari driver is shipped with MacOS.
+        //If you look in /usr/bin you'll see the driver in there called safaridriver
+        WebDriver Driver = new SafariDriver();
+        Driver.quit();
+
+        //https://webkit.org/blog/6900/webdriver-support-in-safari-10/
+        //Talk about enabling these within Safari first
     }
 
     @Test
@@ -50,18 +76,4 @@ public class A_DriverExamples
         WebDriver Driver = new EdgeDriver();
         Driver.quit();
     }
-
-    @Test
-    public void a_CreateRemoteWebDriver() throws MalformedURLException
-    {
-
-        //java -jar src/drivers/selenium-server-standalone-3.0.1.jar -role hub
-        //java -jar src/drivers/selenium-server-standalone-3.0.1.jar -role node -hub http://localhost:4444/wd/hub
-        WebDriver Driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
-        Driver.quit();
-    }
 }
-
-    //SafariDriver
-    //Never need to use to it myself, however I tried on El Capitan it was very flakey
-    //I've heard it's better on Sierra
