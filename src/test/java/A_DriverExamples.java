@@ -72,7 +72,7 @@ public class A_DriverExamples
     @Test
     public void a_CreateEdgeDriver()
     {
-        System.setProperty("webdriver.edge.driver", "C:\\Users\\IEUser\\Documents\\WebDriverWorkshopJava\\IEDriverServer.exe");
+        System.setProperty("webdriver.edge.driver", "C:\\Users\\IEUser\\Documents\\WebDriverWorkshopJava\\EdgeDriver.exe");
         WebDriver Driver = new EdgeDriver();
         Driver.quit();
     }
